@@ -14,7 +14,7 @@
  
     <ion-item>
       <ion-label position="floating">CPF:</ion-label>
-      <ion-input [(ngModel)]="cliente.cpf" formControlName="cpf"></ion-input>
+      <ion-input [(ngModel)]="cliente.cpf" formControlName="cpf" simpleMask="999.999.999-99" [clearIfNotMatch]="true"></ion-input>
       <small class="error-message" *ngIf="(clienteForm.get('cpf').errors?.required || clienteForm.get('cpf').errors?.minlength || clienteForm.get('cpf').errors?.maxlength) && form.submitted">Cpf invalido</small>
     </ion-item>
 
