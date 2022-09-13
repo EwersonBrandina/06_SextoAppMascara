@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'produtos-listagem',
+    redirectTo: 'listagem-produtos',
     pathMatch: 'full'
   },
   {
@@ -16,13 +16,14 @@ const routes: Routes = [
     loadChildren: () => import('./formulario/formulario/formulario.module').then( m => m.FormularioPageModule)
   },
   {
-    path: 'produtos-listagem',
-    loadChildren: () => import('./produtos/produtos-listagem/produtos-listagem.module').then( m => m.ProdutosListagemPageModule)
+    path: 'listagem-produtos',
+    loadChildren: () => import('./pages/listagem-produtos/listagem-produtos.module').then( m => m.ListagemProdutosPageModule)
   },
   {
-    path: 'produtos-detalhes/:detalhes',
-    loadChildren: () => import('./produtos/produtos-detalhes/produtos-detalhes.module').then( m => m.ProdutosDetalhesPageModule)
+    path: 'detalhes-produtos/:id',
+    loadChildren: () => import('./pages/detalhes-produtos/detalhes-produtos.module').then( m => m.DetalhesProdutosPageModule)
   },
+
 ];
 
 @NgModule({
